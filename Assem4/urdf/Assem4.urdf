@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-5.78147546747005E-17 0.06 -3.18747309255138E-17"
+        rpy="0 0 0" />
+      <mass
+        value="21.6942477796077" />
+      <inertia
+        ixx="0.191279933343014"
+        ixy="-2.98049293693505E-18"
+        ixz="-7.44330202399716E-17"
+        iyy="0.817129844527322"
+        iyz="-3.1128339403067E-35"
+        izz="0.677694623573289" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="0.200000000000051 0.194999999998911 0.0599999999999911"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162389" />
+      <inertia
+        ixx="0.00765610745147903"
+        ixy="-2.59813947325536E-15"
+        ixz="-1.65995523162035E-15"
+        iyy="0.01404488198059"
+        iyz="-5.62587526050974E-16"
+        izz="0.00765610745117278" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="0.199999999999949 -0.194999999998911 0.0599999999999912"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162389" />
+      <inertia
+        ixx="0.00765610745147904"
+        ixy="-2.59998411190257E-15"
+        ixz="1.66280727604306E-15"
+        iyy="0.0140448819805901"
+        iyz="5.6347588157639E-16"
+        izz="0.00765610745117279" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.199999999999949 0.194999999998911 0.0599999999999912"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162389" />
+      <inertia
+        ixx="0.00765610745147904"
+        ixy="-2.59815750706472E-15"
+        ixz="-1.6500903650616E-15"
+        iyy="0.0140448819805901"
+        iyz="-5.62420403834275E-16"
+        izz="0.00765610745117279" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/rear_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/rear_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.200000000000051 -0.194999999998911 0.059999999999991"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162389" />
+      <inertia
+        ixx="0.00765610745147902"
+        ixy="-2.59861443297602E-15"
+        ixz="1.66260669344537E-15"
+        iyy="0.01404488198059"
+        iyz="5.6123541463355E-16"
+        izz="0.00765610745117278" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+</robot>
