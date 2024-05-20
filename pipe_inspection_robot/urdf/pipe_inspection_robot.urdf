@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="pipe_inspection_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-5.69948280253396E-17 0.06 -3.19723412409139E-17"
+        rpy="0 0 0" />
+      <mass
+        value="21.6942477796077" />
+      <inertia
+        ixx="0.191279933343014"
+        ixy="-2.98049293693505E-18"
+        ixz="-7.43271411215649E-17"
+        iyy="0.817129844527322"
+        iyz="-3.17457917022308E-35"
+        izz="0.677694623573289" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="0.2 0.195 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="2.1167" />
+      <inertia
+        ixx="0.0076561"
+        ixy="-1.1994E-15"
+        ixz="-1.0877E-13"
+        iyy="0.014045"
+        iyz="2.0482E-15"
+        izz="0.0076561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="0.2 -0.195 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="2.1167" />
+      <inertia
+        ixx="0.0076561"
+        ixy="-1.5989E-15"
+        ixz="1.4912E-13"
+        iyy="0.014045"
+        iyz="-1.523E-15"
+        izz="0.0076561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.2 0.195 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="2.1167" />
+      <inertia
+        ixx="0.0076561"
+        ixy="-1.8473E-15"
+        ixz="-1.4469E-13"
+        iyy="0.014045"
+        iyz="1.9759E-15"
+        izz="0.0076561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/rear_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/rear_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.2 -0.195 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="2.1167" />
+      <inertia
+        ixx="0.0076561"
+        ixy="2.1626E-15"
+        ixz="-1.3835E-13"
+        iyy="0.014045"
+        iyz="-1.9156E-15"
+        izz="0.0076561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.89804 0.89804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pipe_inspection_robot/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1000"
+      velocity="1000" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+</robot>
