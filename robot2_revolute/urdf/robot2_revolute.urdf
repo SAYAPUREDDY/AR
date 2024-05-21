@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot2_revolute">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-5.76000119808203E-17 3.20113853670739E-17 0.06"
+        rpy="0 0 0" />
+      <mass
+        value="21.6942477796077" />
+      <inertia
+        ixx="0.191279933343014"
+        ixy="7.43271411215649E-17"
+        ixz="-2.98049293693505E-18"
+        iyy="0.677694623573289"
+        iyz="3.1128339403067E-35"
+        izz="0.817129844527322" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="0.200000000000035 0.194999999998909 0.0600000000000475"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162386" />
+      <inertia
+        ixx="0.00765610745123127"
+        ixy="-8.66966066338475E-16"
+        ixz="1.20324178202513E-13"
+        iyy="0.0140448819805897"
+        iyz="-2.71645814017407E-15"
+        izz="0.00765610745142051" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="0.200000000000023 -0.194999999998911 0.0599999999999489"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162387" />
+      <inertia
+        ixx="0.00765610745119546"
+        ixy="2.49859006571155E-16"
+        ixz="-8.0357825824444E-14"
+        iyy="0.0140448819805898"
+        iyz="-2.46053950760697E-15"
+        izz="0.00765610745145606" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.200000000000055 0.194999999998913 0.0599999999999808"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162387" />
+      <inertia
+        ixx="0.00765610745141972"
+        ixy="1.73539570531935E-15"
+        ixz="1.20717954225204E-13"
+        iyy="0.0140448819805897"
+        iyz="1.22107905868772E-15"
+        izz="0.0076561074512315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/rear_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/rear_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.200000000000007 -0.194999999998909 0.0600000000000545"
+        rpy="0 0 0" />
+      <mass
+        value="2.11669573162388" />
+      <inertia
+        ixx="0.0076561074511742"
+        ixy="7.12117761998113E-16"
+        ixz="1.99972214730936E-14"
+        iyy="0.0140448819805899"
+        iyz="2.84764578974053E-15"
+        izz="0.00765610745147777" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot2_revolute/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="30"
+      velocity="30" />
+  </joint>
+</robot>
